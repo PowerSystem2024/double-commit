@@ -9,8 +9,15 @@ En este repositorio encontrarás el programa de laboratorio de la carrera Tecnic
 
 ### Integrantes del grupo:
 
-- Franco Morales
-- Gabriel Calcagni
+<div style="display: flex; align-items: center; align-content: center; gap: 8px;">
+<img src="https://avatars.githubusercontent.com/u/134340520?v=4" alt="Avatar github Franco" width="45" height="45" />
+<h4>Franco Morales</h4>
+</div>
+
+<div style="display: flex; align-items: center; align-content: center; gap: 8px;">
+<img src="https://avatars.githubusercontent.com/u/93176365?v=4" alt="Avatar github Gabriel" width="45" height="45" />
+<h4>Gabriel Calcagni</h4>
+</div>
 
 ---
 
