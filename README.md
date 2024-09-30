@@ -11,12 +11,12 @@ En este repositorio encontrarás el programa de laboratorio de la carrera Tecnic
 
 <div style="display: flex; align-items: center; align-content: center; gap: 8px;">
 <img src="https://avatars.githubusercontent.com/u/134340520?v=4" alt="Avatar github Franco" width="45" height="45" />
-<h4>Franco Morales</h4>
+<p style="font-weight: 800; font-size: 1rem">Franco Morales</p>
 </div>
 
-<div style="display: flex; align-items: center; align-content: center; gap: 8px;">
+<div style="display: flex; align-items: center; align-content: center; gap: 8px; margin-top: 8px;">
 <img src="https://avatars.githubusercontent.com/u/93176365?v=4" alt="Avatar github Gabriel" width="45" height="45" />
-<h4>Gabriel Calcagni</h4>
+<p style="font-weight: 800; font-size: 1rem">Gabriel Calcagni</p>
 </div>
 
 ---
