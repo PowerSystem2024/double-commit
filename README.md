@@ -1,7 +1,7 @@
 # Double Commit
 
 <div align="center">
-    <img src="public/double-commit.jfif" alt="Logo grupo Double Commit" width="300" height="auto">
+    <img src="public/double-commit.jfif" alt="Logo grupo Double Commit" width="200" height="auto">
 </div>
 
 ### Bienvenidos al repositorio de Double Commit
