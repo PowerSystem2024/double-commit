@@ -1,0 +1,22 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>330</x><y>50</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Figura&gt;&gt;
+--
+-nLados: int
+--
+Figura (int nLados)
+getNLados() : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>280</y><w>280</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;20;260;20</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>280</y><w>330</w><h>40</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>310;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>290</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>290</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>150</y><w>30</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>390</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Triángulo&gt;&gt;
+--
+-nLados: int
+I1, I2, I3: float
+--
+Triángulo(int nLados)
+getNLados() : int
+areaTriangulo(): float</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>580</x><y>380</y><w>210</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Cuadrado&gt;&gt;
+--
+-nLados: int
+-lado: float
+--
+Cuadrado(int nLados)
+getNLados() : int
+areaCuadrado(): float</panel_attributes><additional_attributes></additional_attributes></element></diagram>
