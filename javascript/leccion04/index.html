@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41A5E1" />
+    <title>Ejercicios Lección 4</title>
+    <style>
+      body {
+        font-family: "Cascadia Code PL SemiBold";
+        background-color: #1e2227;
+        color: #f0f0f0;
+      }
+      input {
+        padding: 4px 8px;
+        border-radius: 99999px;
+        border: 1px solid #999;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .results {
+        animation: fadeIn 1s;
+      }
+
+      button {
+        border: none;
+        padding: 4px 8px;
+        background-color: #eee;
+        color: #1e2227;
+        border: 1px solid #999;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      @keyframes fadeIn {
+        from {
+          transform: translateZ(-100px);
+        }
+        to {
+          transform: translateZ(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button id="delete">Vaciar</button>
+    <form>
+      <h3>Contador de Letras</h3>
+      <input type="text" placeholder="Escriba una palabra.." />
+      <button type="submit">Enviar</button>
+      <div id="results">
+        <template id="word-template">
+          <ul>
+            <li></li>
+            <p></p>
+          </ul>
+        </template>
+      </div>
+    </form>
+    <script src="wordsCount.js"></script>
+  </body>
+</html>
