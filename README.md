@@ -1,6 +1,5 @@
-# Double Commit
-
 <div align="center">
+    <h1>Double Commit</h1>
     <img src="public/double-commit.jfif" alt="Logo grupo Double Commit" width="200" height="auto">
 </div>
 
