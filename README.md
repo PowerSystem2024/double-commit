@@ -6,7 +6,7 @@
 
 ### Bienvenidos al repositorio de Double Commit
 
-En este repositorio encontrarás todo el programa de la carrera Tecnicatura Universitaria en Programación perteneciente a la cohorte 2024 de la Universidad Tecnológica Nacional de San Rafael Mendoza. Dónde vemos las clases de laboratorio de Python, JavaScript, Java, Git. Estos programas está dirigido por el profesor <a href="https://github.com/ArielBetancud22">Ariel Betancud</a>.
+En este repositorio encontrarás el programa de laboratorio de la carrera Tecnicatura Universitaria en Programación perteneciente a la cohorte 2024 de la Universidad Tecnológica Nacional de San Rafael Mendoza. Dónde vemos las clases de Python, JavaScript, Java, Git. Estos programas está dirigido por el profesor <a href="https://github.com/ArielBetancud22">Ariel Betancud</a>.
 
 ### Integrantes del grupo:
 
