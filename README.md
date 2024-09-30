@@ -9,7 +9,7 @@ En este repositorio encontrarás el programa de laboratorio de la carrera Tecnic
 
 ### Integrantes del grupo:
 
-<article style="display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr))">
+<article style="display: grid; grid-template-columns: repeat(auto-fill, minmax(auto, 1fr))">
 
 <div style="display: flex; align-items: center; align-content: center; gap: 8px;">
 <img src="https://avatars.githubusercontent.com/u/134340520?v=4" alt="Avatar github Franco" width="45" height="45" />
