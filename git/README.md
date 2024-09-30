@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Clase de GIT - UTN_FRSR</h1>
+    <h1>Clase de GIT UTN-FRSR</h1>
 </div>
 
 Este readme contiene la clase de git de la facultad UTN_FRSR de la cohorte 2024 de la carrera Tecnicatura Universitaria en Programación, mayormente sus comandos en la consola de Git Bash y sus utilidades.
