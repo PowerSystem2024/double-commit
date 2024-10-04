@@ -7,7 +7,7 @@ import GroupLogo from './components/GroupLogo.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <GroupLogo msg="You did it!" />
+      <GroupLogo msg="Double Commit!" />
     </div>
   </header>
 </template>
