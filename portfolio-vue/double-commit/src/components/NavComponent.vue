@@ -118,8 +118,8 @@ a:hover {
   background-color: rgba(97, 97, 97, 0.5);
   border-radius: 8px;
   transition: 0.3s ease-in-out;
-  color: var(--green-light);
-  text-shadow: 0 0 5px var(--green-light);
+  color: #3285b9;
+  text-shadow: 0 0 5px #3285b9;
 }
 
 .menu-btn {
@@ -138,6 +138,10 @@ a:hover {
   transform: rotate(-45deg);
   animation: spin 0.4s linear both;
   transition: transform 0.3s;
+}
+
+footer {
+  padding-top: 25px;
 }
 
 @keyframes spin {
@@ -176,7 +180,7 @@ a:hover {
   aside.open footer p {
     font-size: 1rem;
     font-weight: 600;
-    color: rgb(36, 114, 215);
+    color: #3285b9;
   }
 
   aside li {
