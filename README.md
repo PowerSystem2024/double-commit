@@ -20,6 +20,11 @@ Este repositorio incluye las lecciones de laboratorio de programación de la fac
 | ![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=java&logoColor=white)                   | Programación         |
 | ![Git](https://img.shields.io/badge/Git-%23F05033.svg?logo=git&logoColor=white)                      | Control de versiones |
 
+### Creación de portafolio con Framework Vue.js
+
+- <a href="https://github.com/orgs/PowerSystem2024/projects/63">Ver etapas</a>
+- En proceso...
+
 ### Integrantes del grupo:
 
 <article style="display: grid; grid-template-columns: repeat(auto-fill, minmax(auto, 1fr))">
