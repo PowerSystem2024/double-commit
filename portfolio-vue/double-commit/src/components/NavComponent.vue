@@ -36,8 +36,8 @@ const toggleMenu = () => {
       <img
         alt="Logo Double Commit"
         class="logo"
-        src="@/assets/double-commit-removebg.png"
-        width="50"
+        src="@/assets/logo-double-commit.svg"
+        width="60"
         height="40"
       />
     </div>
