@@ -161,6 +161,10 @@ footer {
 }
 
 @media (max-width: 700px) {
+  .logo-container span {
+    display: none;
+  }
+
   .menu-btn {
     display: flex;
   }

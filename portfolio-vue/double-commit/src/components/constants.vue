@@ -1,7 +1,9 @@
 <script lang="js">
-// Vemos si se encuentra en entorno de desarrollo o producción para uso de la variable de entorno
-// para cuando subo el proyecto en este caso a Vercel
-export const apiKey = import.meta.env.VITE_WEATHER_API_KEY
+export const apiKey =
+  import.meta.env.MODE === 'development'
+    ? import.meta.env.VITE_WEATHER_API_KEY
+    : // eslint-disable-next-line no-undef
+      process.env.NEXT_PUBLIC_WEATHER_API_KEY
 
 export const projectsItems = [
   {

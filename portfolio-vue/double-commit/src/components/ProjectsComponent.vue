@@ -63,8 +63,21 @@ h3 {
 a {
   display: flex;
   color: var(--color-heading);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 4px 8px;
   align-items: center;
   gap: 4px;
   text-decoration: none;
+}
+
+a:hover {
+  background-color: var(--color-border);
+}
+
+@media (width <= 700px) {
+  section {
+    padding: 10px;
+  }
 }
 </style>

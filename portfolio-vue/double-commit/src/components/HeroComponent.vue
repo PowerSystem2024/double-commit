@@ -26,4 +26,11 @@ span {
   color: #0099ff;
   margin-left: 4px;
 }
+
+@media (width <= 700px) {
+  h1,
+  span {
+    font-size: 2.5rem;
+  }
+}
 </style>
