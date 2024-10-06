@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="js">
 defineProps({
   msg: {
     type: String,

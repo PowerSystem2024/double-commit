@@ -11,4 +11,8 @@ import NavComponent from './components/NavComponent.vue'
   <FooterComponent />
 </template>
 
-<style scoped></style>
+<style scoped>
+#app {
+  width: 100%;
+}
+</style>
