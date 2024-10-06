@@ -2,7 +2,7 @@
 
 <template>
   <footer>
-    <small>&copy;Power System/double-commit UTN-FRSR • {{ new Date().getFullYear() }}</small>
+    <small>&copy;Double Commit UTN-FRSR • {{ new Date().getFullYear() }}</small>
   </footer>
 </template>
 

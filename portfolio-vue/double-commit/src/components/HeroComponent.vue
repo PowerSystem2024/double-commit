@@ -2,6 +2,7 @@
 import { MapPin } from 'lucide-vue-next'
 import { getLocation } from './CurrentPosition.vue'
 import { ref, onMounted } from 'vue'
+import { Terminal } from 'lucide-vue-next'
 
 const location = ref({ city: '', country: '' })
 
@@ -16,7 +17,13 @@ onMounted(async () => {
 
 <template>
   <header>
-    <h1>Bienvenidos al portafolio <span>Double-Commit</span></h1>
+    <h1>
+      Bienvenidos al portafolio
+      <span
+        ><Terminal width="64" height="64" style="transform: translateY(10px); font-weight: 900" />
+        Double-Commit</span
+      >
+    </h1>
   </header>
   <aside>
     <p>

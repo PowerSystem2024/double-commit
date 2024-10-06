@@ -6,6 +6,7 @@
   height: 200px;
   border-radius: 50%;
   filter: blur(130px) drop-shadow(0 0 160px #021e3c);
+  z-index: -1;
 }
 
 .bg-effect-1 {
@@ -16,6 +17,7 @@
   height: 300px;
   border-radius: 50%;
   filter: blur(120px) drop-shadow(0 0 160px #021e3c);
+  z-index: -1;
 }
 
 .bg-effect-2 {
@@ -26,4 +28,5 @@
   height: 200px;
   border-radius: 50%;
   filter: blur(140px) drop-shadow(0 0 160px #021e3c);
+  z-index: -1;
 }
