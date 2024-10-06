@@ -66,8 +66,7 @@ nav {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: var(--color-nav);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   font-size: 12px;
   text-align: center;
   align-items: center;
@@ -84,8 +83,8 @@ nav {
 
 @keyframes add-shadow {
   to {
-    background: #18181b0b;
-    box-shadow: 0 0 1px var(--color-border);
+    background: #18181b5d;
+    box-shadow: 0 0 2px var(--color-border);
   }
 }
 

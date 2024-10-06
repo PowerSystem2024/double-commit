@@ -2,6 +2,7 @@
 import FooterComponent from './components/FooterComponent.vue'
 import HeroComponent from './components/HeroComponent.vue'
 import NavComponent from './components/NavComponent.vue'
+import ProjectsComponent from './components/ProjectsComponent.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import NavComponent from './components/NavComponent.vue'
   <div class="bg-effect-2"></div>
   <NavComponent />
   <HeroComponent />
+  <ProjectsComponent />
   <FooterComponent />
 </template>
 
