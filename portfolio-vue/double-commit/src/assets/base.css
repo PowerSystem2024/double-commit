@@ -31,7 +31,7 @@
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
 
-  --border-dark: rgb(45, 46, 45);
+  --border-dark: hsla(00, 12%, 12%);
 
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
