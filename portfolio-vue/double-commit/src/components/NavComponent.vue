@@ -128,8 +128,8 @@ a:hover {
   background-color: rgba(97, 97, 97, 0.5);
   border-radius: 8px;
   transition: 0.3s ease-in-out;
-  color: #0099ff;
-  text-shadow: 0 0 5px #0099ff;
+  color: var(--second-color-text);
+  text-shadow: 0 0 5px var(--second-color-text);
 }
 
 .menu-btn {
