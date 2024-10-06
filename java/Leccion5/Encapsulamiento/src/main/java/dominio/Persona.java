@@ -1,13 +1,12 @@
-
 package dominio;
 
-
 public class Persona {
+
     // Atributos
     private String nombre;
     private double sueldo;
     private boolean eliminado;
-    
+
     // Constructor
     public Persona(String nombre, double sueldo, boolean eliminado) { // El constructor debe llevar el mismo nombre de la clase
         this.nombre = nombre;
@@ -38,9 +37,10 @@ public class Persona {
     public void setEliminado(boolean eliminado) {
         this.eliminado = eliminado;
     }
-
     
-    
-    
-    
+    public String toString() { // Convierte en una cadena cada atributo
+        return "Persona [nombre: "+this.nombre+
+                ", suledo: "+ this.sueldo+
+                ", está elimindado?: "+ this.eliminado+"]";
+    }
 }
