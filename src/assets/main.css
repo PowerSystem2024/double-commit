@@ -1,0 +1,29 @@
+@import './base.css';
+
+.bg-effect-0 {
+  background-color: #021e3c;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(130px) drop-shadow(0 0 160px #021e3c);
+}
+
+.bg-effect-1 {
+  position: absolute;
+  right: 20px;
+  background-color: #021e3c;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(120px) drop-shadow(0 0 160px #021e3c);
+}
+
+.bg-effect-2 {
+  position: absolute;
+  left: calc(30% - 50px);
+  background-color: #021e3c;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(140px) drop-shadow(0 0 160px #021e3c);
+}
