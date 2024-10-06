@@ -40,6 +40,7 @@ const toggleMenu = () => {
         width="60"
         height="40"
       />
+      <span>Double Commit</span>
     </div>
     <button class="menu-btn" @click="toggleMenu">
       <AlignRight v-if="!isMenuOpen" class="menu-icon" />
@@ -67,33 +68,43 @@ nav {
   height: 60px;
   background-color: var(--color-nav);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--color-border);
   font-size: 12px;
   text-align: center;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem 0 0;
   z-index: 99;
+  animation: add-shadow linear both;
+}
+
+nav {
+  animation-timeline: scroll();
+  animation-range: 0 150px;
+}
+
+@keyframes add-shadow {
+  to {
+    background: #18181b0b;
+    box-shadow: 0 0 1px var(--color-border);
+  }
 }
 
 .logo-container {
   display: flex;
+  align-items: center;
   padding-left: 1rem;
+  cursor: default;
 }
 
-.logo:hover {
+.logo-container:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
 
 .logo-container span {
-  background-color: var(--green-light);
-  border: 1px solid var(--green);
-  padding: 2px 6px;
-  border-radius: 10px;
+  font-size: 1.4rem;
   font-weight: 700;
-  font-size: 10px;
-  color: var(--color-text);
+  color: var(--color-heading);
 }
 
 aside {
