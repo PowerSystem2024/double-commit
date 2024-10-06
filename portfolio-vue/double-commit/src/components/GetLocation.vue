@@ -1,6 +1,7 @@
 <script lang="js">
 import { apiKey } from './constants.vue'
 let hook = {}
+
 // Clase para obtener ubucación de la api
 export class getLocation {
   static async getData() {
