@@ -118,7 +118,7 @@ aside li {
 }
 
 a {
-  color: var(--color-text);
+  color: var(--color-heading);
   text-decoration: none;
   font-size: 1rem;
   font-weight: 600;
@@ -129,8 +129,8 @@ a:hover {
   background-color: rgba(97, 97, 97, 0.5);
   border-radius: 8px;
   transition: 0.3s ease-in-out;
-  color: #3285b9;
-  text-shadow: 0 0 5px #3285b9;
+  color: #0099ff;
+  text-shadow: 0 0 5px #0099ff;
 }
 
 .menu-btn {

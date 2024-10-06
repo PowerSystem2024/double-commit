@@ -3,35 +3,6 @@
 // para cuando subo el proyecto en este caso a Vercel
 export const apiKey = import.meta.env.VITE_WEATHER_API_KEY
 
-export const kelvintoCelsius = (...temp) => {
-  return temp - 273.15
-}
-
-export const mapCondition = (description) => {
-  switch (description) {
-    case 'few clouds':
-      return 'Nubosidad Leve'
-    case 'overcast clouds':
-      return 'Nublado'
-    case 'sunny':
-      return 'Soleado'
-    case 'clear sky':
-      return 'Cielo Despejado'
-    case 'scattered clouds':
-      return 'Nubes dispersas'
-    case 'broken clouds':
-      return 'Nubes desarmadas'
-    case 'light rain':
-      return 'Lluvia ligera'
-    default:
-      return description
-  }
-}
-
-export const getWeatherIcon = (iconCode) => {
-  return `https://openweathermap.org/img/wn/${iconCode}@2x.png`
-}
-
 export const proyectsItems = [
   {
     name: 'Proyecto Python',
