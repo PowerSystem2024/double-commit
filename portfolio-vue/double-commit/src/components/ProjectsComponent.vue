@@ -5,7 +5,6 @@ import { ArrowUpRight } from 'lucide-vue-next'
 </script>
 
 <template>
-  <h1>Sección Proyectos</h1>
   <section>
     <div class="project" v-for="(project, index) in projectsItems" :key="index">
       <img :src="project.img" :alt="project.name" width="100%" height="auto" />
@@ -22,36 +21,35 @@ import { ArrowUpRight } from 'lucide-vue-next'
 </template>
 
 <style lang="css" scoped>
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  margin-top: 190px;
-}
-
 section {
+  max-width: 872px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  padding: 80px;
   justify-content: center;
-  margin: 0 auto;
-  gap: 8px;
+  margin: 100px auto;
+  gap: 16px;
 }
 
 .project {
-  border: 1px solid var(--color-border);
   border-radius: 20px;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 article {
   padding: 16px;
+  background: linear-gradient(to bottom, #0099ff9d, #00ccffe1);
 }
 
 h3 {
   font-size: 1.5rem;
   font-weight: 600;
+  color: var(--color-heading);
+}
+
+p {
+  color: var(--color-heading);
 }
 
 .links {
@@ -62,22 +60,26 @@ h3 {
 
 a {
   display: flex;
-  color: var(--color-heading);
-  border: 1px solid var(--color-border);
+  color: var(--second-color-text);
+  background: #ffffff;
   border-radius: 8px;
   padding: 4px 8px;
   align-items: center;
   gap: 4px;
   text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
-  background-color: var(--color-border);
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 @media (width <= 700px) {
   section {
+    max-width: 100%;
     padding: 10px;
+    gap: 8px;
   }
 }
 </style>

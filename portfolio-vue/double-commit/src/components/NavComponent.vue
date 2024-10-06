@@ -1,27 +1,7 @@
 <script setup lang="js">
 import { AlignRight, X } from 'lucide-vue-next'
 import { ref } from 'vue'
-
-const items = ref([])
-const navItems = [
-  {
-    name: 'Inicio',
-    path: '/'
-  },
-  {
-    name: 'Acerca',
-    path: '/about'
-  },
-  {
-    name: 'Contacto',
-    path: '/contact'
-  },
-  {
-    name: 'Proyectos',
-    path: '#proyects'
-  }
-]
-items.value = navItems
+import { navItems } from './constants.vue'
 
 const isMenuOpen = ref(false)
 
@@ -33,13 +13,7 @@ const toggleMenu = () => {
 <template>
   <nav>
     <div class="logo-container">
-      <img
-        alt="Logo Double Commit"
-        class="logo"
-        src="@/assets/logo-double-commit.svg"
-        width="60"
-        height="40"
-      />
+      <img alt="Logo Double Commit" class="logo" src="@/assets/logo-double-commit.svg" />
       <span>Double Commit</span>
     </div>
     <button class="menu-btn" @click="toggleMenu">
@@ -93,6 +67,11 @@ nav {
   align-items: center;
   padding-left: 1rem;
   cursor: default;
+}
+
+img {
+  width: 60px;
+  height: 40px;
 }
 
 .logo-container:hover {
@@ -163,6 +142,11 @@ footer {
 @media (max-width: 700px) {
   .logo-container span {
     display: none;
+  }
+
+  img {
+    width: 50px;
+    height: 40px;
   }
 
   .menu-btn {
