@@ -2,14 +2,15 @@
 import { apiKey } from './constants.vue'
 let hook = {}
 
-// Clase para obtener ubucación de la api
+// Clase para obtener ubucación de la api geolocation.microlink.io
 export class getLocation {
   static async getData() {
     const response = await fetch('https://geolocation.microlink.io/')
     const data = await response.json()
     return data
   }
-  // Se obtiene la latitud y longitud de la api del navegador para inyectar en la api del clima
+  // Se obtiene la latitud y longitud de la api del navegador para inyectar en la api del clima así
+  // obtener la ubicación más precisa (Encontré este pequeño hack a la api del clima 🙂)
   static async currentPosition() {
     return new Promise((resolve, reject) => {
       if (navigator.geolocation) {
