@@ -11,7 +11,7 @@ import { members } from './constants.vue'
       </p>
       <div class="members-list">
         <article v-for="(member, index) in members" :key="index">
-          <a :href="member.link">
+          <a :href="member.link" :title="`Ir al perfil de ${member.name}`">
             <img :src="member.avatar" :alt="member.name" width="45" height="45" />
             <span>{{ member.name }}</span>
           </a>
