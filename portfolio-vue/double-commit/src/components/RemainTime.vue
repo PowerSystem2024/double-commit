@@ -22,7 +22,7 @@ function actualizarContador() {
 
   // Asegurarse de que siempre haya dos dígitos usando padStart
   timer.value = {
-    // Extraemos valores del hook de vue.js
+    // Extraemos valores con el hook de vue.js (ref.value)
     days: dias.toString().padStart(2, '0'),
     hours: horas.toString().padStart(2, '0'),
     minutes: minutos.toString().padStart(2, '0'),
