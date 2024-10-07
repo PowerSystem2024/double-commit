@@ -75,6 +75,7 @@ const intervalo = setInterval(actualizarContador, 1000)
   align-items: center;
   background: linear-gradient(to bottom, #0099ff9d, #00ccffe1);
   border-radius: 10px;
+  border: 1px solid var(--color-border);
   padding: 10px;
   width: 60px;
 }
