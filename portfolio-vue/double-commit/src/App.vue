@@ -5,6 +5,7 @@ import HeroComponent from './components/HeroComponent.vue'
 import NavComponent from './components/NavComponent.vue'
 import ProjectsComponent from './components/ProjectsComponent.vue'
 import SectionTitle from './components/SectionTitle.vue'
+import RemainTime from './components/RemainTime.vue'
 </script>
 
 <template>
@@ -17,6 +18,9 @@ import SectionTitle from './components/SectionTitle.vue'
   <AboutComponent />
   <SectionTitle children="Proyectos" id="projects" />
   <ProjectsComponent />
+  <SectionTitle children="Tiempo Entrega Proyectos ⏳" />
+  <RemainTime />
+  <SectionTitle children="En desarrollo..." />
   <FooterComponent />
 </template>
 
