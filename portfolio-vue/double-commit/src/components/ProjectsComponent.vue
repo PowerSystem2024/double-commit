@@ -70,7 +70,7 @@ a {
   gap: 4px;
   text-decoration: none;
   font-weight: 500;
-  filter: drop-shadow(0 0 4px #2f3a419d);
+  box-shadow: 0 0 1px #2f3a419d;
 }
 
 a:hover {
@@ -83,7 +83,7 @@ a:hover {
   section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     max-width: 100%;
-    padding: 20px;
+    padding: 40px;
   }
 }
 </style>

@@ -59,13 +59,19 @@ article {
 a {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   text-decoration: none;
   font-weight: 500;
 }
 
+a:hover img {
+  outline: 2px solid #00ccffe1;
+  transition: ease-in-out 0.2s;
+}
+
 img {
   border-radius: 50%;
+  outline: 2px solid #fff;
 }
 
 span {

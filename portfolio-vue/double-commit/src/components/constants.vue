@@ -7,12 +7,12 @@ export const navItems = [
     path: '#about'
   },
   {
-    name: 'Contacto',
-    path: '/contact'
-  },
-  {
     name: 'Proyectos',
     path: '#projects'
+  },
+  {
+    name: 'Contacto',
+    path: '/contact'
   }
 ]
 

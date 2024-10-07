@@ -20,12 +20,21 @@ import RemainTime from './components/RemainTime.vue'
   <ProjectsComponent />
   <SectionTitle children="Tiempo Entrega Proyectos ⏳" />
   <RemainTime />
-  <SectionTitle children="En desarrollo..." />
+  <SectionTitle children="En desarrollo...🚧" class="development" />
   <FooterComponent />
 </template>
 
 <style scoped>
 #app {
   width: 100%;
+}
+.development {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
 }
 </style>
