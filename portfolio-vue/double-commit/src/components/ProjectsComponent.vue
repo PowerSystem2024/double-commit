@@ -5,19 +5,21 @@ import { ArrowUpRight } from 'lucide-vue-next'
 </script>
 
 <template>
-  <section>
-    <div class="project" v-for="(project, index) in projectsItems" :key="index">
-      <img :src="project.img" :alt="project.name" width="100%" height="auto" />
-      <article>
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
-        <div class="links">
-          <a :href="project.link">Link <ArrowUpRight width="18" /></a>
-          <a :href="project.code">Code <Github width="18" /></a>
-        </div>
-      </article>
-    </div>
-  </section>
+  <main>
+    <section>
+      <div class="project" v-for="(project, index) in projectsItems" :key="index">
+        <img :src="project.img" :alt="project.name" width="100%" height="auto" />
+        <article>
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="links">
+            <a :href="project.link">Link <ArrowUpRight width="18" /></a>
+            <a :href="project.code">Code <Github width="18" /></a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 </template>
 
 <style lang="css" scoped>
@@ -68,18 +70,20 @@ a {
   gap: 4px;
   text-decoration: none;
   font-weight: 500;
+  filter: drop-shadow(0 0 4px #2f3a419d);
 }
 
 a:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px #2f3a419d);
 }
 
 @media (width <= 700px) {
   section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     max-width: 100%;
-    padding: 10px;
-    gap: 8px;
+    padding: 20px;
   }
 }
 </style>
