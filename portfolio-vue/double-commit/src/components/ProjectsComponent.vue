@@ -13,8 +13,10 @@ import { ArrowUpRight } from 'lucide-vue-next'
           <h3>{{ project.name }}</h3>
           <p>{{ project.description }}</p>
           <div class="links">
-            <a :href="project.link">Link <ArrowUpRight width="18" /></a>
-            <a :href="project.code">Code <Github width="18" /></a>
+            <a :href="project.link" :title="`Ir al ${project.name}`"
+              >Link <ArrowUpRight width="18"
+            /></a>
+            <a :href="project.code" :title="`Ir a ${project.code}`">Code <Github width="18" /></a>
           </div>
         </article>
       </div>
