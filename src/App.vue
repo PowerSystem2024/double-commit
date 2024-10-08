@@ -1,4 +1,5 @@
 <script setup>
+import ContactFrom from './components/ContactFrom.vue';
 import FooterComponent from './components/FooterComponent.vue'
 import HeroComponent from './components/HeroComponent.vue'
 import NavComponent from './components/NavComponent.vue'
@@ -12,6 +13,7 @@ import ProjectsComponent from './components/ProjectsComponent.vue'
   <NavComponent />
   <HeroComponent />
   <ProjectsComponent />
+  <ContactFrom  /> 
   <FooterComponent />
 </template>
 
