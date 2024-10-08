@@ -20,3 +20,24 @@ import ProjectsComponent from './components/ProjectsComponent.vue'
   width: 100%;
 }
 </style>
+
+<template>
+  <div id="app">
+    <ContactForm />
+  </div>
+</template>
+
+<script>
+import ContactForm from './components/ContactForm.vue';
+
+export default {
+  name: 'App',
+  components: {
+    ContactForm
+  }
+};
+</script>
+
+<style>
+/* No se que son los estilos globales */
+</style>
