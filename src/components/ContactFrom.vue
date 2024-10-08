@@ -1,3 +1,9 @@
+<script setup lang="js">
+
+</script>
+
+
+
 <template>
     <div class="contact-form">
       <h2>Formulario de Contacto</h2>
@@ -45,48 +51,7 @@
       </form>
     </div>
   </template>
-  <script>
-  export default {
-    data() {
-      return {
-        form: {
-          name: "",
-          email: "",
-          message: ""
-        },
-        errors: {}
-      };
-    },
-    methods: {
-      submitForm() {
-        this.errors = {};
-  
-        // Validaciones básicas
-        if (!this.form.name) {
-          this.errors.name = "El nombre es requerido.";
-        }
-        if (!this.form.email) {
-          this.errors.email = "El correo electrónico es requerido.";
-        } else if (!this.validEmail(this.form.email)) {
-          this.errors.email = "El correo electrónico no es válido.";
-        }
-        if (!this.form.message) {
-          this.errors.message = "El mensaje es requerido.";
-        }
-  
-        // Si no hay errores, puedes procesar el formulario (ej. enviarlo a un servidor)
-        if (Object.keys(this.errors).length === 0) {
-          alert("Formulario enviado con éxito!");
-          // Aquí podrías enviar el formulario a una API
-        }
-      },
-      validEmail(email) {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-      }
-    }
-  };
-  </script>
+
   
   <style scoped>
   .contact-form {
