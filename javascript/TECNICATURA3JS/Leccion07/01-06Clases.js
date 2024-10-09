@@ -22,6 +22,10 @@ class Persona {
   set apellido(apellido) {
     this._apellido = apellido;
   }
+
+  nombreCompleto() {
+    return this._nombre + " " + this._apellido;
+  }
 }
 
 class Empleado extends Persona {
@@ -36,6 +40,18 @@ class Empleado extends Persona {
 
   set departamento(departamento) {
     this._departamento = departamento;
+  }
+
+  //Sobreescritura
+  nombreCompleto() {
+    return super.nombreCompleto() + ", " + this._departamento;
+  }
+  //Sobreescribiendo el metodo de la clase padre (Objet)
+  //Se aplica el polimorfismo que significa = multiples formas en tiempos de ejecución
+  //El metodo se ejecuta depende si es una referencia de tipo  padre o hijo
+  toString() {
+    //Regresa un String
+    return this.nombreCompleto();
   }
 }
 
@@ -52,4 +68,8 @@ console.log(persona2.nombre);
 
 let empleado1 = new Empleado("Marta", "Cuba", "Sistemas");
 console.log(empleado1);
-console.log(empleado1.nombre);
+console.log(empleado1.nombreCompleto());
+
+//Object.prototype.toString Esta es la manera de acceder a un metodo de manera dinamica
+console.log(empleado1.toString());
+console.log(persona1.toString());
