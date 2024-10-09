@@ -27,7 +27,7 @@ Este repositorio incluye las lecciones de laboratorio de programación de la fac
 
 ### Integrantes del grupo:
 
-<article style="display: grid; grid-template-columns: repeat(auto-fill, minmax(auto, 1fr))">
+<article style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))">
 
 <a style="display: flex; align-items: center; align-content: center; gap: 8px;" href="https://github.com/Mendoxeneixe">
 <img src="https://avatars.githubusercontent.com/u/134340520?v=4" alt="Avatar github Franco" width="45" height="45" />
