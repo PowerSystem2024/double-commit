@@ -70,5 +70,7 @@ persona3 = Persona(
     Modelo=2007,
 )
 persona3.mostrar_detalle()
-print(persona3._dni)  # En VScode se ve OJO 👀 (Supuestamente está encapsulado 😲)
+print(
+    persona3._dni
+)  # En VScode se ve OJO 👀 CUIDADO (Supuestamente está encapsulado 😲)
 # persona3.__nombre # Está totalmente encapsulado
