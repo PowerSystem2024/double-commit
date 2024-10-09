@@ -39,6 +39,11 @@ Este repositorio incluye las lecciones de laboratorio de programación de la fac
 <span style="font-weight: 800; font-size: 1rem">Gabriel Calcagni</span>
 </div>
 
+<div style="display: flex; align-items: center; align-content: center; gap: 8px; margin-top: 8px;">
+<img src="https://avatars.githubusercontent.com/u/25463245?v=4" alt="Avatar github Philama" width="45" height="45" />
+<span style="font-weight: 800; font-size: 1rem">Guardini Philama</span>
+</div>
+
 </article>
 
 ---
