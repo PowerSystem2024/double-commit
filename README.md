@@ -44,6 +44,11 @@ Este repositorio incluye las lecciones de laboratorio de programación de la fac
 <span style="font-weight: 800; font-size: 1rem">Guardini Philama</span>
 </div>
 
+<div style="display: flex; align-items: center; align-content: center; gap: 8px; margin-top: 8px;" href="https://github.com/megon1">
+<img src="https://avatars.githubusercontent.com/u/86989774?v=4" alt="Avatar github megon1" width="45" height="45" />
+<span style="font-weight: 800; font-size: 1rem">Mauro Exequiel Gonzalez</span>
+</div>
+
 </article>
 
 ---
