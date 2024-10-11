@@ -7,7 +7,7 @@ const timer = ref({ days: '', hours: '', minutes: '', seconds: '' })
  * Fuente Stack Overflow: https://es.stackoverflow.com/questions/332347/contador-regresivo-de-tiempo-entre-2-fechas-php
  */
 
-const fechaObjetivo = new Date('November 02, 2024 00:00:00').getTime()
+const fechaObjetivo = new Date('November 2, 2024 00:00:00').getTime()
 
 // Función para calcular la diferencia y actualizar el contador
 function actualizarContador() {
@@ -22,7 +22,7 @@ function actualizarContador() {
 
   // Asegurarse de que siempre haya dos dígitos usando padStart
   timer.value = {
-    // Extraemos valores con el hook de vue.js (ref.value)
+    // Extraemos valores del hook de vue.js
     days: dias.toString().padStart(2, '0'),
     hours: horas.toString().padStart(2, '0'),
     minutes: minutos.toString().padStart(2, '0'),

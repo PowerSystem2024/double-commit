@@ -87,5 +87,24 @@ a:hover {
     max-width: 100%;
     padding: 40px;
   }
+
+  .project {
+    view-timeline-name: --project;
+    view-timeline-axis: block;
+
+    animation-timeline: --project;
+    animation-name: reveal;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      filter: brightness(2);
+      scale: 0.6;
+    }
+  }
 }
 </style>

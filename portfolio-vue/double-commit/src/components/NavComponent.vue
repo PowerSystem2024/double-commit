@@ -18,7 +18,7 @@ const toggleMenu = () => {
     </div>
     <button class="menu-btn" @click="toggleMenu">
       <AlignRight v-if="!isMenuOpen" class="menu-icon" width="26" height="26" />
-      <X v-if="isMenuOpen" class="x-icon" width="24" height="24" />
+      <X v-if="isMenuOpen" class="x-icon" />
     </button>
 
     <aside :class="{ open: isMenuOpen }">

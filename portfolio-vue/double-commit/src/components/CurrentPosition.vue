@@ -31,6 +31,17 @@ export class getLocation {
       }
     })
   }
+
+  static async lat() {
+    const data = await this.currentPosition()
+    return data.lat
+  }
+
+  static async lon() {
+    const data = await this.currentPosition()
+    return data.lon
+  }
+
   // Obtengo los datos del clima según la latitud y longitud
   //  Con éste truquito me permite obtener una ubicación más precisa y también los datos del clima
   static async apiData() {
@@ -46,8 +57,11 @@ export class getLocation {
     const data = await this.getData()
     return data.ip.address
   }
-  // Utilizo el operador nullish ?? para utilizar uno u otro
-  // Según si el usuario permite la geolocalización
+  /**
+   * Utilizo el operador nullish ?? para utilizar uno u otro
+   * Según si el usuario permite la geolocalización del navegador, si no lo permite
+   * se usa geolocation.microlink de todas formas
+   */
   static async city() {
     const data = (await this.apiData()) ?? (await this.getData())
     return data.name ?? data.city.name
@@ -61,16 +75,6 @@ export class getLocation {
   static async flag() {
     const data = await this.getData()
     return data.country.flag
-  }
-
-  static async lat() {
-    const data = await this.currentPosition()
-    return data.lat
-  }
-
-  static async lon() {
-    const data = await this.currentPosition()
-    return data.lon
   }
 }
 </script>
