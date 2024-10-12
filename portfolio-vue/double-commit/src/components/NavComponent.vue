@@ -8,6 +8,10 @@ const isMenuOpen = ref(false)
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
 </script>
 
 <template>
@@ -23,7 +27,7 @@ const toggleMenu = () => {
 
     <aside :class="{ open: isMenuOpen }">
       <li v-for="(item, index) in navItems" :key="index">
-        <a class="link" :href="item.path" @click="toggleMenu">{{ item.name }}</a>
+        <a class="link" :href="item.path" @click="closeMenu">{{ item.name }}</a>
       </li>
       <footer v-if="isMenuOpen">
         <p>&copy;Double Commit - UTN-FRSR {{ new Date().getFullYear() }}</p>

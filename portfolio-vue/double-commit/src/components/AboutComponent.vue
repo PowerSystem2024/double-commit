@@ -31,13 +31,6 @@ section {
   padding: 10px;
 }
 
-.container-about {
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  padding: 16px;
-  background: linear-gradient(to bottom, #0099ff9d, #00ccffe1);
-}
-
 p {
   color: var(--color-heading);
   font-weight: 600;

@@ -12,7 +12,7 @@ export const navItems = [
   },
   {
     name: 'Contacto',
-    path: '/contact'
+    path: '#contact'
   }
 ]
 
@@ -31,6 +31,16 @@ export const members = [
     name: 'Guardini Philama',
     avatar: 'https://avatars.githubusercontent.com/u/25463245?v=4',
     link: 'https://github.com/Philama'
+  },
+  {
+    name: 'Mauro Gonzales',
+    avatar: 'https://avatars.githubusercontent.com/u/86989774?v=4',
+    link: 'https://github.com/megon1'
+  },
+  {
+    name: 'Cecilia Olejarczyk',
+    avatar: 'https://avatars.githubusercontent.com/u/104603137?v=4',
+    link: 'https://github.com/CeciliaOlejar'
   }
 ]
 
@@ -57,4 +67,16 @@ export const projectsItems = [
     description: 'Este es nuestro proyecto creado en Java para la Universidad.'
   }
 ]
+
+export const DBKEY = import.meta.env.VITE_SUPABASE_PUBLIC_ANNONKEY
+export const DBURL = import.meta.env.VITE_SUPABASE_URL
+
+export const resize = () => {
+  const textarea = document.getElementById('textarea')
+  textarea.addEventListener('input', () => {
+    textarea.style.height = 'auto'
+    textarea.style.height = textarea.scrollHeight + 'px'
+  })
+  return textarea
+}
 </script>

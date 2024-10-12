@@ -30,3 +30,10 @@
   filter: blur(140px) drop-shadow(0 0 160px #021e3c);
   z-index: -1;
 }
+
+.container-about {
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  padding: 16px;
+  background: linear-gradient(to bottom, #0099ff9d, #00ccffe1);
+}

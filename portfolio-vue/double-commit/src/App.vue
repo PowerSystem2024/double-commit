@@ -6,6 +6,7 @@ import NavComponent from './components/NavComponent.vue'
 import ProjectsComponent from './components/ProjectsComponent.vue'
 import SectionTitle from './components/SectionTitle.vue'
 import RemainTime from './components/RemainTime.vue'
+import CommentsForm from './components/CommentsForm.vue'
 </script>
 
 <template>
@@ -14,13 +15,17 @@ import RemainTime from './components/RemainTime.vue'
   <div class="bg-effect-2"></div>
   <NavComponent />
   <HeroComponent />
-  <SectionTitle children="Acerca" id="about" />
+  <span id="about"></span>
+  <SectionTitle children="Acerca" />
   <AboutComponent />
-  <SectionTitle children="Proyectos" id="projects" />
+  <span id="projects"></span>
+  <SectionTitle children="Proyectos" />
   <ProjectsComponent />
   <SectionTitle children="Tiempo Entrega Proyectos ⏳" />
   <RemainTime />
-  <SectionTitle children="En desarrollo...🚧" class="development" />
+  <span id="contact"></span>
+  <SectionTitle children="Comentarios" />
+  <CommentsForm />
   <FooterComponent />
 </template>
 
