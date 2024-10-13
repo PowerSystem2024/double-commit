@@ -10,7 +10,7 @@ defineProps({
   <article>
     <div
       v-for="(data, index) in dataComments"
-      :key="index"
+      :key="data.id"
       :style="index % 2 === 0 ? 'background-color: #0099ff9d' : 'background-color: #00ccffe1;'"
       :title="
         'Mensaje enviado el ' +
@@ -35,7 +35,7 @@ defineProps({
           />
           <aside>
             <span class="name">{{ data.name }}</span>
-            <small>{{ data.city }},{{ data.country }}</small>
+            <small>{{ data.city }}, {{ data.country }}</small>
           </aside>
         </section>
         <span class="date">{{ Format.date(data.created_at) }}</span>

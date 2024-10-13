@@ -1,17 +1,30 @@
 <script setup lang="js">
 import { MapPin } from 'lucide-vue-next'
-import { getLocation } from './CurrentPosition.vue'
+import { GetLocation } from './CurrentPosition.vue'
 import { ref, onMounted } from 'vue'
 import { Terminal } from 'lucide-vue-next'
+import { Model } from './ActionClass.vue'
 
 const location = ref({ city: '', country: '' })
+const ip = ref([])
 
 onMounted(async () => {
   const currentPosition = {
-    city: await getLocation.city(),
-    country: await getLocation.country()
+    city: await GetLocation.city(),
+    country: await GetLocation.country()
   }
   location.value = currentPosition
+
+  ip.value[0] = await Model.getVisitsCount()
+  const actualIP = await GetLocation.ip()
+  const lastIP = ip.value[0].map((v) => v.ip)
+
+  if (actualIP !== lastIP[0]) {
+    await Model.sendVisit({ ip: await actualIP })
+  } else {
+    null
+    return
+  }
 })
 </script>
 

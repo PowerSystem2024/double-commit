@@ -3,7 +3,7 @@ import { ref, computed, onMounted } from 'vue'
 import { z } from 'zod'
 import { Model } from './ActionClass.vue'
 import CommentsComponent from './CommentsComponent.vue'
-import { getLocation } from './CurrentPosition.vue'
+import { GetLocation } from './CurrentPosition.vue'
 import { resize } from './constants.vue'
 
 // Hooks de vue.js
@@ -59,9 +59,9 @@ const refreshComments = async () => {
 const sendForm = async (e) => {
   e.preventDefault()
   isSubmiting.value = true
-  dataForm.value.ip = await getLocation.ip()
-  dataForm.value.city = await getLocation.city()
-  dataForm.value.country = await getLocation.country()
+  dataForm.value.ip = await GetLocation.ip()
+  dataForm.value.city = await GetLocation.city()
+  dataForm.value.country = await GetLocation.country()
   await Model.sendComment(formSchema, dataForm.value, errors.value)
   showDialog.value = true
   dialogMessage.value = `Muchas gracias por tu comentario ${dataForm.value.name}!`

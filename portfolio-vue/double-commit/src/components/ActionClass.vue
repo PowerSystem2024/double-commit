@@ -33,5 +33,24 @@ export class Model {
       }
     }
   }
+
+  static async sendVisit(obj) {
+    const { data, error } = await supabase.from('double_commit_visits').insert([obj])
+    if (error) {
+      console.error('Error al enviar datos: ', error.message)
+    }
+    return data
+  }
+
+  static async getVisitsCount() {
+    const { data, error } = await supabase
+      .from('double_commit_visits')
+      .select('*')
+      .order('id', { ascending: false })
+      .limit(1)
+
+    if (error) return console.error('Error al recibir los datos de la visita: ', error.message)
+    return data
+  }
 }
 </script>

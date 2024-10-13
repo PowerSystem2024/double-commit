@@ -3,7 +3,7 @@ import { apiKey } from './constants.vue'
 let hook = {}
 
 // Clase para obtener ubucación de la api geolocation.microlink.io
-export class getLocation {
+export class GetLocation {
   static async getData() {
     const response = await fetch('https://geolocation.microlink.io/')
     const data = await response.json()
