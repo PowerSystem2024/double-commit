@@ -15,15 +15,15 @@ onMounted(async () => {
   }
   location.value = currentPosition
 
-  ip.value[0] = await Model.getVisitsCount()
-  const actualIP = await GetLocation.ip()
-  const lastIP = ip.value[0].map((v) => v.ip)
+  ip.value = await Model.getVisitsCount()
 
-  if (actualIP !== lastIP[0]) {
-    await Model.sendVisit({ ip: await actualIP })
+  const actualIP = await GetLocation.ip()
+  const previousIPs = ip.value.map((v) => v.ip)
+
+  if (!previousIPs.includes(actualIP)) {
+    await Model.sendVisit({ ip: actualIP })
   } else {
-    null
-    return
+    return null
   }
 })
 </script>
