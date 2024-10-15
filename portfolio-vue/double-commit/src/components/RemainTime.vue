@@ -71,6 +71,7 @@ const intervalo = setInterval(actualizarContador, 1000)
   align-items: center;
   font-family: 'Arial', sans-serif;
   gap: 10px;
+  padding: 12px;
 }
 
 .bloque {

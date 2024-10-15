@@ -1,5 +1,5 @@
 <script lang="js" setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { z } from 'zod'
 import { Model } from './ActionClass.vue'
 import CommentsComponent from './CommentsComponent.vue'
@@ -20,6 +20,9 @@ const showDialog = ref(false)
 const dialogMessage = ref('')
 const errors = ref({})
 const comments = ref([])
+const MAX_LENGTH = 160
+const LENGTH = 0
+const counterChars = ref(LENGTH)
 
 /**
  * Validación con zod, documentación: https://zod.dev/?id=introduction
@@ -29,7 +32,7 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, { message: 'El mesaje debe tener al menos 10 caracteres' })
-    .max(160, { message: 'El mensaje no debe superar los 160 caracteres' })
+    .max(MAX_LENGTH, { message: `El mensaje no debe superar los ${MAX_LENGTH} caracteres` })
 })
 
 const isFormValid = computed(() => {
@@ -55,6 +58,7 @@ const validateField = (field) => {
 const refreshComments = async () => {
   comments.value = await Model.getComment()
 }
+
 // Envío del formulario a la BD
 const sendForm = async (e) => {
   e.preventDefault()
@@ -74,6 +78,14 @@ const closeDialog = () => {
   showDialog.value = false
 }
 
+// Actualizar el contador de caracteres con el observador watch de vue.js
+watch(
+  () => dataForm.value.message,
+  (newValue) => {
+    counterChars.value = LENGTH + newValue.length
+  }
+)
+
 onMounted(refreshComments)
 </script>
 
@@ -89,7 +101,9 @@ onMounted(refreshComments)
         font-weight: 600;
       "
     >
-      Dejame un comentario si te ha gustado el portfolio! 😃
+      ¡Déjanos un comentario si te ha gustado el portafolio! ✨ También poedés aprovechar para
+      avisarnos si encuentras algún bug, detalles en los estilos o tienes sugerencias de mejora.
+      ¡Tus opiniones son muy valiosas! 😃
     </p>
     <input
       type="text"
@@ -108,11 +122,14 @@ onMounted(refreshComments)
     <textarea
       id="textarea"
       v-model="dataForm.message"
-      @blur="validateField('message')"
       placeholder="Escribí tu mensaje aquí"
-      @input="resize"
-      maxlength="160"
+      @blur="validateField('message')"
+      @change="resize"
+      :maxlength="MAX_LENGTH"
     ></textarea>
+    <aside class="aside-textarea">
+      <small>{{ counterChars }} / {{ MAX_LENGTH }}</small>
+    </aside>
     <span v-if="errors.message" class="error">{{ errors.message }}</span>
 
     <button type="submit" :disabled="!isFormValid">
@@ -144,33 +161,69 @@ form {
   display: grid;
   justify-content: center;
   margin: 120px auto;
-  gap: 12px;
+  padding: 12px;
+}
+
+input:placeholder-shown {
+  font-family: monospace;
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
 }
 
 input,
 textarea {
   padding: 10px 18px;
   background-color: transparent;
-  border: none;
-  border-radius: 8px;
-  border: 1px solid var(--color-border);
+  margin-top: 12px;
   color: var(--color-heading);
 }
 
 textarea {
   resize: none;
   overflow-y: hidden;
+  border: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+}
+
+.aside-textarea {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 20px;
+  bottom: 0;
+  background: linear-gradient(to bottom, #00ccffe1, #0099ff9d);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  justify-content: end;
+}
+
+.aside-textarea small {
+  font-size: 11px;
+  margin-right: 8px;
+  color: var(--color-heading);
 }
 
 input:focus,
 textarea:focus {
   outline: 1px solid var(--second-color-text);
+  outline-offset: -1.5px;
 }
 
 form button {
   border: none;
-  padding: 8px 12px;
+  padding: 12px;
   border-radius: 8px;
+  margin-top: 12px;
   border: 1px solid var(--color-border);
   background: linear-gradient(to bottom, #0099ff9d, #00ccffe1);
   cursor: pointer;
@@ -204,7 +257,6 @@ dialog {
 }
 
 dialog button {
-  padding: 8px 12px;
   display: flex;
   justify-content: center;
   margin: 16px auto 0;
@@ -236,6 +288,7 @@ dialog[open] {
   color: tomato;
   font-size: 11px;
   margin-top: 4px;
+  margin-left: 8px;
 }
 
 form > div {

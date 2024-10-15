@@ -52,5 +52,17 @@ export class Model {
     if (error) return console.error('Error al recibir los datos de la visita: ', error.message)
     return data
   }
+
+  static async delete(id) {
+    const { error } = await supabase.from('portfolio_comments').delete().eq('id', id)
+
+    if (error) {
+      console.error('Error al borrar comentario: ', error.message)
+      return
+    }
+
+    location.reload()
+    await this.getComment()
+  }
 }
 </script>

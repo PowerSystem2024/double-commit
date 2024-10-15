@@ -1,7 +1,6 @@
 <script setup lang="js">
 import { ref, onMounted } from 'vue'
 import { Model } from './ActionClass.vue'
-import { Eye } from 'lucide-vue-next'
 
 const visitsCount = ref([])
 
@@ -12,10 +11,10 @@ onMounted(async () => {
 
 <template>
   <footer v-for="(visits, index) in visitsCount" :key="index">
-    <small class="visits"
-      ><Eye width="16" height="16" /> Visitas al portfolio: {{ visits.id }}</small
+    <small class="visits"><span class="eyes">👀</span> Visitas al portfolio: {{ visits.id }}</small>
+    <small class="text-footer"
+      >&copy; Double Commit UTN~FRSR • {{ new Date().getFullYear() }}</small
     >
-    <small>&copy;Double Commit UTN-FRSR • {{ new Date().getFullYear() }}</small>
   </footer>
 </template>
 
@@ -31,6 +30,7 @@ small {
   font-weight: 700;
 }
 .visits {
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 8px 16px;
@@ -41,5 +41,36 @@ small {
   color: var(--color-heading);
   align-items: center;
   gap: 4px;
+  filter: drop-shadow(0 0 50px #0099ff9d);
+  cursor: default;
+  align-items: center;
+}
+.text-footer {
+  margin: 16px auto;
+}
+.eyes {
+  transform: translateY(calc(50% - 12px));
+  width: 16px;
+  height: 16px;
+  animation: blink 6s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.1;
+  }
+  98% {
+    opacity: 0.1;
+  }
+  99% {
+    opacity: 1;
+  }
 }
 </style>
