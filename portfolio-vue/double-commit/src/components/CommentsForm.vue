@@ -101,9 +101,9 @@ onMounted(refreshComments)
         font-weight: 600;
       "
     >
-      ¡Déjanos un comentario si te ha gustado el portafolio! ✨ También poedés aprovechar para
-      avisarnos si encuentras algún bug, detalles en los estilos o tienes sugerencias de mejora.
-      ¡Tus opiniones son muy valiosas! 😃
+      ¡Déjanos un comentario si te ha gustado el portafolio! ✨ También podés aprovechar para
+      avisarnos si encontrás algun bug, detalles en los estilos o tenés sugerencias de mejora. ¡Tus
+      opiniones son muy valiosas! 😃
     </p>
     <input
       type="text"
