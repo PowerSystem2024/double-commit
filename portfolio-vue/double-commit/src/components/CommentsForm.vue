@@ -128,7 +128,7 @@ onMounted(refreshComments)
       :maxlength="MAX_LENGTH"
     ></textarea>
     <aside class="aside-textarea">
-      <small>{{ counterChars }} / {{ MAX_LENGTH }}</small>
+      <small>Caractéres</small><small>{{ counterChars }} / {{ MAX_LENGTH }}</small>
     </aside>
     <span v-if="errors.message" class="error">{{ errors.message }}</span>
 
@@ -204,12 +204,12 @@ textarea {
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  justify-content: end;
+  justify-content: space-between;
 }
 
 .aside-textarea small {
   font-size: 11px;
-  margin-right: 8px;
+  margin-inline: 8px;
   color: var(--color-heading);
 }
 
