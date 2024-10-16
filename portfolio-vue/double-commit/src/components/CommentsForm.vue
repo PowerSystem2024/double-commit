@@ -128,7 +128,7 @@ onMounted(refreshComments)
       :maxlength="MAX_LENGTH"
     ></textarea>
     <aside class="aside-textarea">
-      <small>Caractéres</small><small>{{ counterChars }} / {{ MAX_LENGTH }}</small>
+      <small>Caracteres</small><small>{{ counterChars }} / {{ MAX_LENGTH }}</small>
     </aside>
     <span v-if="errors.message" class="error">{{ errors.message }}</span>
 
@@ -198,7 +198,6 @@ textarea {
   width: 100%;
   height: 20px;
   bottom: 0;
-  background: linear-gradient(to bottom, #00ccffe1, #0099ff9d);
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   border-left: 1px solid var(--color-border);
