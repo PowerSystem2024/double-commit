@@ -86,3 +86,32 @@ def listarTerminos(
 
 
 listarTerminos(IDE="Integrated Development Enviroment", PK="Primary Key")
+listarTerminos(nombre="Lionel Messi")
+
+
+def desplegarNombres(nombres):
+    for nombre in nombres:
+        print(nombre)
+
+
+nombres_2 = ["Tito", "Pedro", "Carlos"]
+desplegarNombres(nombres_2)
+desplegarNombres("Carla")
+# desplegarNombres(10) No es un objeto iterable
+desplegarNombres(
+    (10,)
+)  # La convertimos a una tupla / En un solo elemento no olviar la coma
+desplegarNombres([26, 86])  # La convertimos a una lista
+
+num = int(input("Digite un número para calcular el factorial de un número: "))
+
+
+# Funciones recursivas
+def factorial(n):
+    if n == 0:  # Caso base
+        return 1
+    else:
+        return n * factorial(n - 1)  # Caso recursivo
+
+
+print(f"El factorial de {num} es {factorial(num)}")
