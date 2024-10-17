@@ -192,6 +192,10 @@ textarea {
   border-top: 1px solid var(--color-border);
 }
 
+textarea:focus {
+  outline: none;
+}
+
 .aside-textarea {
   position: relative;
   display: flex;
@@ -208,12 +212,10 @@ textarea {
 
 .aside-textarea small {
   font-size: 11px;
-  margin-inline: 8px;
-  color: var(--color-heading);
+  margin-inline: 16px;
 }
 
-input:focus,
-textarea:focus {
+input:focus {
   outline: 1px solid var(--second-color-text);
   outline-offset: -1.5px;
 }
