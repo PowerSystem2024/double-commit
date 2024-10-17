@@ -7,6 +7,7 @@ import ProjectsComponent from './components/ProjectsComponent.vue'
 import SectionTitle from './components/SectionTitle.vue'
 import RemainTime from './components/RemainTime.vue'
 import CommentsForm from './components/CommentsForm.vue'
+import MarqueeComponent from './components/MarqueeComponent.vue'
 </script>
 
 <template>
@@ -26,6 +27,7 @@ import CommentsForm from './components/CommentsForm.vue'
   <span id="contact"></span>
   <SectionTitle children="Comentarios" />
   <CommentsForm />
+  <MarqueeComponent />
   <FooterComponent />
 </template>
 
