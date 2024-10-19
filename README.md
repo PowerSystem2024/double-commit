@@ -49,6 +49,11 @@ Este repositorio incluye las lecciones de laboratorio de programación de la fac
 <span style="font-weight: 800; font-size: 1rem">Mauro Exequiel Gonzalez</span>
 </div>
 
+<div style="display: flex; align-items: center; align-content: center; gap: 8px; margin-top: 8px;" href="https://github.com/CeciliaOlejar">
+<img src="https://avatars.githubusercontent.com/u/104603137?v=4" alt="Avatar github ceciliaOlejar" width="45" height="45" />
+<span style="font-weight: 800; font-size: 1rem">Cecilia Olejarczyk</span>
+</div>
+
 </article>
 
 ---
