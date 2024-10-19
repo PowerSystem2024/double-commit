@@ -1,5 +1,7 @@
 <script lang="js">
 export const apiKey = import.meta.env.VITE_WEATHER_API_KEY
+export const DBKEY = import.meta.env.VITE_SUPABASE_PUBLIC_ANNONKEY
+export const DBURL = import.meta.env.VITE_SUPABASE_URL
 
 export const navItems = [
   {
@@ -67,9 +69,6 @@ export const projectsItems = [
     description: 'Este es nuestro proyecto creado en Java para la Universidad.'
   }
 ]
-
-export const DBKEY = import.meta.env.VITE_SUPABASE_PUBLIC_ANNONKEY
-export const DBURL = import.meta.env.VITE_SUPABASE_URL
 
 export const resize = () => {
   const textarea = document.getElementById('textarea')

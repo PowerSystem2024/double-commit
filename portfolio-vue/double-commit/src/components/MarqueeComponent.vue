@@ -23,7 +23,8 @@
 
 <style lang="css" scoped>
 section {
-  width: 500%;
+  margin-block: 60px;
+  width: 300%;
 }
 p {
   line-height: 3;
@@ -36,7 +37,6 @@ h3 {
   border-bottom: 2px solid #999;
 }
 .marquee {
-  background-color: black;
   transform: translate(10px);
   & > * {
     animation: marquee linear;
@@ -53,18 +53,13 @@ h3 {
   animation-timeline: view();
 }
 
-.marquee-phone,
-.reverse-phone {
-  display: none;
-}
-
 @keyframes marquee {
   to {
     transform: translateX(-10%);
   }
 }
 
-@media (width < 700px) {
+@media (width < 1000px) {
   .marquee,
   .reverse {
     display: none;

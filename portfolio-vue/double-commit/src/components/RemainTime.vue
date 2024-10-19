@@ -7,7 +7,7 @@ const timer = ref({ days: '', hours: '', minutes: '', seconds: '' })
  * Fuente Stack Overflow: https://es.stackoverflow.com/questions/332347/contador-regresivo-de-tiempo-entre-2-fechas-php
  */
 
-const fechaObjetivo = new Date('November 2, 2024 00:00:00').getTime()
+const fechaObjetivo = new Date('November 10, 2024 00:00:00').getTime()
 
 // Función para calcular la diferencia y actualizar el contador
 function actualizarContador() {
