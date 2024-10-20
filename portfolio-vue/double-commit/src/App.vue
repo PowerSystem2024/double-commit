@@ -8,6 +8,7 @@ import SectionTitle from './components/SectionTitle.vue'
 import RemainTime from './components/RemainTime.vue'
 import CommentsForm from './components/CommentsForm.vue'
 import MarqueeComponent from './components/MarqueeComponent.vue'
+import JavaCard from './components/JavaCard.vue'
 </script>
 
 <template>
@@ -22,8 +23,9 @@ import MarqueeComponent from './components/MarqueeComponent.vue'
   <span id="projects"></span>
   <SectionTitle children="Proyectos" />
   <ProjectsComponent />
-  <SectionTitle children="Tiempo Entrega Proyecto ☕ JAVA ⏳" />
+  <SectionTitle children="Tiempo Entrega Proyecto ☕ Java" />
   <RemainTime />
+  <JavaCard />
   <span id="contact"></span>
   <SectionTitle children="Comentarios" />
   <CommentsForm />
