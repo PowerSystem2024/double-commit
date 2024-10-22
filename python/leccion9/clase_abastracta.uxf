@@ -1,0 +1,16 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>180</x><y>140</y><w>210</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Figura Geométrica&gt;&gt;
+--
+-acnho
+-alto
+--
++area()&lt;&lt;abstract&gt;&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>540</y><w>210</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Cuadrado&gt;&gt;
+--
++area() &lt;&lt;implementación&gt;&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>450</y><w>210</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Rectángulo&gt;&gt;
+--
++area() &lt;&lt;implementación&gt;&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>250</y><w>290</w><h>220</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;10;270;200</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>260</y><w>100</w><h>210</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;190;30;10</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>260</y><w>310</w><h>300</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;280;290;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>200</y><w>130</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Color&gt;&gt;
+--
++color</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>250</y><w>90</w><h>310</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;290;10;10</additional_attributes></element></diagram>
