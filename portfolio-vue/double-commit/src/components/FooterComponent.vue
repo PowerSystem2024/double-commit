@@ -23,7 +23,10 @@ onMounted(async () => {
     <small style="text-align: center; margin: 25px auto; color: var(--color-heading)"
       ><MapPinnedIcon class="map-pinned" /> Última visita desde:
     </small>
-    <div class="from" v-for="(visit, index) in visitsFrom" :key="index">
+    <div v-if="index < 0" class="from">
+      <small>Cargando..</small>
+    </div>
+    <div v-else class="from" v-for="(visit, index) in visitsFrom" :key="index">
       <small>{{ visit.city }}, {{ visit.country }}</small>
     </div>
     <small class="text-footer"
