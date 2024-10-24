@@ -37,7 +37,7 @@ h3 {
   border-bottom: 2px solid #999;
 }
 .marquee {
-  transform: translate(10px);
+  transform: translate(10px) rotate(-1deg);
   & > * {
     animation: marquee linear;
     animation-timeline: view();

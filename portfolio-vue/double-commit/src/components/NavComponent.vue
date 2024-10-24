@@ -44,7 +44,6 @@ nav {
   left: 0;
   width: 100%;
   height: 60px;
-  backdrop-filter: blur(10px);
   font-size: 12px;
   text-align: center;
   align-items: center;
@@ -62,6 +61,7 @@ nav {
 @keyframes add-shadow {
   to {
     background: #18181b5d;
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 2px var(--color-border);
   }
 }

@@ -15,7 +15,7 @@ onMounted(async () => {
   }
   location.value = currentPosition
 
-  ip.value = await Model.getVisitsCount()
+  ip.value = await Model.getVisits('ip', 1)
 
   const objData = {
     ip: await GetLocation.ip(),
