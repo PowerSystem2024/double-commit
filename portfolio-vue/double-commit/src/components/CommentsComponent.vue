@@ -3,6 +3,7 @@ import { Trash } from 'lucide-vue-next'
 import { Format } from './FormatClass.vue'
 import { ref, onMounted } from 'vue'
 import { Model } from './ActionClass.vue'
+import { GetLocation } from './CurrentPosition.vue'
 
 defineProps({
   dataComments: Array
@@ -11,8 +12,10 @@ defineProps({
 const ip = ref([])
 const previousIP = ref([])
 const comments = ref([])
+const currentIp = ref([])
 
 onMounted(async () => {
+  currentIp.value = await GetLocation.ip()
   ip.value = await Model.getVisits('ip', 1)
   previousIP.value = ip.value.map((v) => v.ip)
   comments.value = await Model.getComment()
@@ -29,8 +32,6 @@ onMounted(async () => {
       :title="
         'Mensaje enviado el ' +
         Format.dateAndTime(data.created_at) +
-        ' IP: ' +
-        data.ip +
         '. Desde ' +
         data.city +
         ', ' +
@@ -49,10 +50,10 @@ onMounted(async () => {
           />
           <aside>
             <span class="name">{{ data.name }}</span>
-            <small>{{ data.city }}, {{ data.country }}</small>
+            <small>{{ data.city }} {{ data.province }}, {{ data.country }}</small>
           </aside>
         </section>
-        <span v-if="data.id === data.id">
+        <span v-if="data.ip === currentIp">
           <Trash id="trash" width="16" height="16" @click="Model.delete(data.id)" />
         </span>
         {{}}

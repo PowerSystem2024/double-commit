@@ -13,6 +13,7 @@ const dataForm = ref({
   email: '',
   message: '',
   city: '',
+  province: '',
   country: ''
 })
 const isSubmiting = ref(false)
@@ -65,6 +66,7 @@ const sendForm = async (e) => {
   isSubmiting.value = true
   dataForm.value.ip = await GetLocation.ip()
   dataForm.value.city = await GetLocation.city()
+  dataForm.value.province = await GetLocation.province()
   dataForm.value.country = await GetLocation.country()
   await Model.sendComment(formSchema, dataForm.value, errors.value)
   showDialog.value = true
@@ -142,7 +144,9 @@ onMounted(refreshComments)
     <button class="dialog-btn" @click="closeDialog">Cerrar</button>
   </dialog>
 
-  <div v-if="comments.length === 0"></div>
+  <div v-if="comments.length === 0">
+    <div class="place-content"></div>
+  </div>
   <section v-else>
     <div v-if="comments.length > 1">
       <h3>Comentarios recientes:</h3>
@@ -320,5 +324,9 @@ h3 {
   font-weight: 700;
   color: var(--color-heading);
   margin: 16px auto;
+}
+.place-content {
+  width: 430px;
+  height: 150px;
 }
 </style>
