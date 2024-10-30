@@ -2,6 +2,7 @@
 import { supabase } from '@/lib/supabaseClient'
 import { z } from 'zod'
 
+// Clase para enviar
 export class Model {
   static async getComment() {
     const { data, error } = await supabase
@@ -42,12 +43,12 @@ export class Model {
     return data
   }
 
-  static async getVisitsCount() {
+  static async getVisits({ column }, limit) {
     const { data, error } = await supabase
       .from('double_commit_visits')
-      .select('*')
+      .select(column)
       .order('id', { ascending: false })
-      .limit(1)
+      .limit(limit)
 
     if (error) return console.error('Error al recibir los datos de la visita: ', error.message)
     return data

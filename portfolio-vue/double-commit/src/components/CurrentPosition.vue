@@ -76,5 +76,14 @@ export class GetLocation {
     const data = await this.getData()
     return data.country.flag
   }
+  /**
+   * Fuente para información sobre uso de expresiones regulares:
+   * https://regex101.com/
+   */
+  static async province() {
+    const data = await this.getData()
+    let timeZone = data.timezone.replace(/.*\//, '') // Expresión regular para formateo de datos
+    return timeZone.replace('_', ' ')
+  }
 }
 </script>

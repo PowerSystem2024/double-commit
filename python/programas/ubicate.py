@@ -25,7 +25,9 @@ ip = data["ip"]["address"]
 city = data["city"]["name"]
 province = data["timezone"]
 country = data["country"]["name"]
+province = clean_text(province)
+province = province.replace("_", " ")
 
 print(
-    f"Usted está en {city} {clean_text(province)}, {country}. Su dirección de IP es: {ip}"
+    f"{Fore.GREEN}Usted está en: {Fore.BLUE}{city} {province}, {country}. {Fore.GREEN}Su dirección de IP es: {Fore.BLUE}{ip}"
 )

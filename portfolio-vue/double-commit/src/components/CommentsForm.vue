@@ -13,6 +13,7 @@ const dataForm = ref({
   email: '',
   message: '',
   city: '',
+  province: '',
   country: ''
 })
 const isSubmiting = ref(false)
@@ -43,7 +44,7 @@ const isFormValid = computed(() => {
     return false
   }
 })
-
+// Validación de campos con zod
 const validateField = (field) => {
   try {
     formSchema.pick({ [field]: true }).parse(dataForm.value)
@@ -54,7 +55,7 @@ const validateField = (field) => {
     }
   }
 }
-
+// Obtener comentarios para refrescar y renderizarlo
 const refreshComments = async () => {
   comments.value = await Model.getComment()
 }
@@ -65,6 +66,7 @@ const sendForm = async (e) => {
   isSubmiting.value = true
   dataForm.value.ip = await GetLocation.ip()
   dataForm.value.city = await GetLocation.city()
+  dataForm.value.province = await GetLocation.province()
   dataForm.value.country = await GetLocation.country()
   await Model.sendComment(formSchema, dataForm.value, errors.value)
   showDialog.value = true
@@ -85,7 +87,7 @@ watch(
     counterChars.value = LENGTH + newValue.length
   }
 )
-
+// Se monta la función para refrescar el comentario apenas se envía
 onMounted(refreshComments)
 </script>
 
@@ -139,10 +141,12 @@ onMounted(refreshComments)
 
   <dialog :open="showDialog">
     <p>{{ dialogMessage }}</p>
-    <button @click="closeDialog">Cerrar</button>
+    <button class="dialog-btn" @click="closeDialog">Cerrar</button>
   </dialog>
 
-  <div v-if="comments.length === 0"></div>
+  <div v-if="comments.length === 0">
+    <div class="place-content"></div>
+  </div>
   <section v-else>
     <div v-if="comments.length > 1">
       <h3>Comentarios recientes:</h3>
@@ -251,29 +255,30 @@ dialog {
   padding: 16px;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(to bottom, #0099ff9d, #00ccffe1);
+  background: linear-gradient(to bottom, #0099ffed, #00ccffed);
   border: 1px solid var(--color-border);
   color: var(--color-heading);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 99;
 }
 
-dialog button {
+.dialog-btn {
   display: flex;
   justify-content: center;
   margin: 16px auto 0;
+  padding: 8px 16px;
   border-radius: 8px;
+  border: none;
   border: 1px solid var(--color-border);
-  background: linear-gradient(to bottom, #0099ff9d, #00ccffe1);
+  background: #0099ff9d;
   color: var(--color-heading);
+  font-weight: 700;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-dialog button:hover {
-  transform: scale(1.03);
-}
-
-dialog buton:active {
-  transform: scale(0.98);
+.dialog-btn:hover {
+  filter: contrast(125%);
 }
 
 dialog[open] {
@@ -282,6 +287,17 @@ dialog[open] {
   @starting-style {
     scale: 0;
     translate: 0 200px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  1% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -302,22 +318,15 @@ button:disabled {
   cursor: not-allowed;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-}
-
 h3 {
   text-align: center;
   font-size: 1.7rem;
   font-weight: 700;
   color: var(--color-heading);
   margin: 16px auto;
+}
+.place-content {
+  width: 430px;
+  height: 150px;
 }
 </style>

@@ -5,17 +5,18 @@ import { ref, onMounted } from 'vue'
 import { Terminal } from 'lucide-vue-next'
 import { Model } from './ActionClass.vue'
 
-const location = ref({ city: '', country: '' })
+const location = ref({ city: '', province: '', country: '' })
 const ip = ref([])
 
 onMounted(async () => {
   const currentPosition = {
     city: await GetLocation.city(),
+    province: await GetLocation.province(),
     country: await GetLocation.country()
   }
   location.value = currentPosition
 
-  ip.value = await Model.getVisitsCount()
+  ip.value = await Model.getVisits('ip', 1)
 
   const objData = {
     ip: await GetLocation.ip(),
@@ -44,8 +45,8 @@ onMounted(async () => {
       Es un placer recibirte desde
       <b v-if="location.city === ''" class="loading">Cargando...</b>
       <b v-else
-        ><MapPin width="15" height="15" style="transform: translateY(2px)" /> {{ location.city }},
-        {{ location.country }}!
+        ><MapPin width="15" height="15" style="transform: translateY(2px)" /> {{ location.city }}
+        {{ location.province }}, {{ location.country }}!
       </b>
     </p>
   </aside>
@@ -93,7 +94,9 @@ aside {
 }
 
 p {
-  padding: 6px 12px;
+  padding-block: 3px;
+  padding-left: 12px;
+  padding-right: 4px;
   border: 1px solid var(--color-border);
   border-radius: 99px;
   background-color: #02284a;
@@ -121,7 +124,7 @@ b {
   }
 }
 
-@media (width <= 400) {
+@media (width < 420px) {
   p {
     font-size: 12px;
   }
