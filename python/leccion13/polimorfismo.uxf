@@ -1,0 +1,13 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>280</x><y>80</y><w>210</w><h>100</h></coordinates><panel_attributes>&lt;&lt;Empleado&gt;&gt;
+--
++nombre: str
++sueldo: int
+--
+__str__()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>340</y><w>210</w><h>100</h></coordinates><panel_attributes>&lt;&lt;Gerente&gt;&gt;
+--
++departamento
+--
+__str__()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>170</y><w>90</w><h>190</h></coordinates><panel_attributes>lt=.&gt;
+&lt;&lt;extends&gt;&gt;</panel_attributes><additional_attributes>10;170;10;10</additional_attributes></element></diagram>
