@@ -37,4 +37,4 @@ csv_data = get_data_csv(url)
 
 # Imprimimos las ciudades de cada persona
 for persona in csv_data:
-    print(persona["persona"])
+    print(persona["ciudad"])
