@@ -57,8 +57,8 @@ export const projectsItems = [
   {
     name: 'Proyecto JavaScript',
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
-    link: 'https://elproyecto.qui',
-    code: 'https://github.com/double-commit',
+    link: 'https://solidsnk86.github.io/app_sorteo/',
+    code: 'https://github.com/solidsnk86/app_sorteo',
     description: 'Por aquí puedes ver el proyecto de JavaScript para la Facultad.'
   },
   {

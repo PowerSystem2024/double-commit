@@ -82,7 +82,7 @@ export class GetLocation {
    */
   static async province() {
     const data = await this.getData()
-    let timeZone = data.timezone.replace(/.*\//, '') // Expresión regular para formateo de datos
+    let timeZone = data.timezone.replace(/.*\//, '') // Expresión regular para formateo de datos, quita las primeras palabras antes del último /
     return timeZone.replace('_', ' ')
   }
 }
