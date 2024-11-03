@@ -14,18 +14,23 @@ const previousIP = ref([])
 const comments = ref([])
 const currentIp = ref([])
 
+const refreshData = async () => {
+  comments.value = await Model.getComment()
+}
+
 onMounted(async () => {
   currentIp.value = await GetLocation.ip()
   ip.value = await Model.getVisits('ip', 1)
   previousIP.value = ip.value.map((v) => v.ip)
-  comments.value = await Model.getComment()
 })
+
+onMounted(refreshData)
 </script>
 
 <template>
   <article>
     <div
-      v-for="(data, index) in dataComments"
+      v-for="(data, index) in comments"
       :key="data.id"
       id="comment"
       :style="index % 2 === 0 ? 'background-color: #0099ff9d' : 'background-color: #00ccffe1;'"
