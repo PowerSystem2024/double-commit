@@ -30,7 +30,7 @@ onMounted(refreshData)
 <template>
   <article>
     <div
-      v-for="(data, index) in comments"
+      v-for="(data, index) in comments || dataComments"
       :key="data.id"
       id="comment"
       :style="index % 2 === 0 ? 'background-color: #0099ff9d' : 'background-color: #00ccffe1;'"
