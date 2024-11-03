@@ -59,7 +59,7 @@ onMounted(refreshData)
           </aside>
         </section>
         <span v-if="data.ip === currentIp">
-          <Trash id="trash" width="16" height="16" @click="Model.delete(data.id)" />
+          <Trash id="trash" width="16" height="16" @click="Model.delete(data.id, refreshData)" />
         </span>
         {{}}
         <span class="date">{{ Format.date(data.created_at) }}</span>
