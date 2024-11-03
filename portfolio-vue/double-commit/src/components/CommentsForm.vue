@@ -325,6 +325,7 @@ h3 {
   color: var(--color-heading);
   margin: 16px auto;
 }
+
 .place-content {
   width: 430px;
   height: 150px;

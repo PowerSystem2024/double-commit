@@ -8,6 +8,7 @@ const visitsFrom = ref([])
 
 const from = {
   city: '',
+  province: '',
   country: ''
 }
 
@@ -21,13 +22,18 @@ onMounted(async () => {
   <footer v-for="(visits, index) in visitsCount" :key="index">
     <small class="visits"><span class="eyes">👀</span> Visitas al portfolio: {{ visits.id }}</small>
     <small style="text-align: center; margin: 25px auto; color: var(--color-heading)"
-      ><MapPinnedIcon class="map-pinned" /> Última visita desde:
+      >Última visita desde:
     </small>
-    <div v-if="index < 0" class="from">
+    <article v-if="visitsFrom.length !== 0">
+      <div class="from" v-for="(visit, index) in visitsFrom" :key="index">
+        <small
+          ><MapPinnedIcon class="map-pinned" /> {{ visit.city }} {{ visit.province }},
+          {{ visit.country }}</small
+        >
+      </div>
+    </article>
+    <div v-else class="from">
       <small>Cargando..</small>
-    </div>
-    <div v-else class="from" v-for="(visit, index) in visitsFrom" :key="index">
-      <small>{{ visit.city }}, {{ visit.country }}</small>
     </div>
     <small class="text-footer"
       >&copy; Double Commit UTN~FRSR • {{ new Date().getFullYear() }}</small
@@ -103,6 +109,7 @@ small {
   width: 16px;
   height: 16px;
   transform: translateY(1px);
+  color: var(--color-heading);
 }
 
 @media (width < 700px) {

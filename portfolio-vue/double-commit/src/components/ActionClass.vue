@@ -2,7 +2,7 @@
 import { supabase } from '@/lib/supabaseClient'
 import { z } from 'zod'
 
-// Clase para enviar y recibir datos desde Supabase
+// Clase para enviar
 export class Model {
   static async getComment() {
     const { data, error } = await supabase

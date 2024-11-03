@@ -21,6 +21,7 @@ onMounted(async () => {
   const objData = {
     ip: await GetLocation.ip(),
     city: await GetLocation.city(),
+    province: await GetLocation.province(),
     country: await GetLocation.country()
   }
   const previousIPs = ip.value.map((v) => v.ip)

@@ -22,7 +22,7 @@ export const members = [
   {
     name: 'Franco Morales',
     avatar: 'https://avatars.githubusercontent.com/u/134340520?v=4',
-    link: 'https://github.com/Mendoxeneixe'
+    link: 'https://github.com/Xeneixxe'
   },
   {
     name: 'Gabriel Calcagni',
