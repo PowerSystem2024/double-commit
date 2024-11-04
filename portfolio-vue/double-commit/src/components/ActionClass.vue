@@ -15,7 +15,7 @@ export class Model {
     return data
   }
 
-  static async sendComment(schema, data, errors) {
+  static async sendComment(schema, data, errors, onCreate) {
     try {
       schema.parse(data)
 
@@ -26,6 +26,8 @@ export class Model {
       } else {
         errors = {}
       }
+
+      await onCreate()
     } catch (error) {
       if (error instanceof z.ZodError) {
         error.errors.forEach((err) => {
@@ -54,7 +56,7 @@ export class Model {
     return data
   }
 
-  static async delete(id, onDelete) {
+  static async delete(id) {
     const { error } = await supabase.from('portfolio_comments').delete().eq('id', id)
 
     if (error) {
@@ -62,7 +64,7 @@ export class Model {
       return
     }
 
-    await onDelete()
+    return { success: true }
   }
 }
 </script>
