@@ -30,7 +30,6 @@ import JavaCard from './components/JavaCard.vue'
   <SectionTitle children="Comentarios" />
   <CommentsForm />
   <MarqueeComponent />
-  <SectionTitle children="Proximamente más..." />
   <FooterComponent />
 </template>
 

@@ -69,16 +69,19 @@ const sendForm = async (e) => {
   dataForm.value.city = await GetLocation.city()
   dataForm.value.province = await GetLocation.province()
   dataForm.value.country = await GetLocation.country()
+
   await Model.sendComment(formSchema, dataForm.value, errors.value)
+
   showDialog.value = true
   dialogMessage.value = `Muchas gracias por tu comentario ${dataForm.value.name}!`
   dataForm.value = { name: '', email: '', message: '' }
+
   await refreshComments()
+
   commentSection.value = window.scrollTo({
     top: document.documentElement.scrollHeight * 0.7,
     behavior: 'smooth'
   })
-
   isSubmiting.value = false
 }
 
@@ -153,13 +156,13 @@ onMounted(refreshComments)
   <div v-if="comments.length === 0">
     <div class="place-content"></div>
   </div>
-  <section v-else :ref="commentSection">
+  <section v-else>
     <div v-if="comments.length > 1">
-      <h3>Comentarios recientes:</h3>
+      <h3 :ref="commentSection">Comentarios recientes:</h3>
       <CommentsComponent :data-comments="comments" v-on:delete="refreshComments" />
     </div>
     <div v-else>
-      <h3>Comentario reciente:</h3>
+      <h3 :ref="commentSection">Comentario reciente:</h3>
       <CommentsComponent :data-comments="comments" v-on:delete="refreshComments" />
     </div>
   </section>
