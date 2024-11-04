@@ -24,6 +24,7 @@ const comments = ref([])
 const MAX_LENGTH = 160
 const LENGTH = 0
 const counterChars = ref(LENGTH)
+const commentSection = ref(null)
 
 /**
  * Validación con zod, documentación: https://zod.dev/?id=introduction
@@ -73,6 +74,11 @@ const sendForm = async (e) => {
   dialogMessage.value = `Muchas gracias por tu comentario ${dataForm.value.name}!`
   dataForm.value = { name: '', email: '', message: '' }
   await refreshComments()
+  commentSection.value = window.scrollTo({
+    top: document.documentElement.scrollHeight * 0.7,
+    behavior: 'smooth'
+  })
+
   isSubmiting.value = false
 }
 
@@ -147,7 +153,7 @@ onMounted(refreshComments)
   <div v-if="comments.length === 0">
     <div class="place-content"></div>
   </div>
-  <section v-else>
+  <section v-else :ref="commentSection">
     <div v-if="comments.length > 1">
       <h3>Comentarios recientes:</h3>
       <CommentsComponent :data-comments="comments" v-on:delete="refreshComments" />
