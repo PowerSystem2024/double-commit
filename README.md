@@ -56,6 +56,41 @@ Este repositorio incluye las lecciones de laboratorio de programación de la fac
 
 </article>
 
+## Para poder ver el portafolio en vivo, puedes visitar el siguiente link:
+
+<a href="https://double-commit.vercel.app/">Portafolio en vivo</a>
+
+## Para ejecutar el proyecto en local, puedes seguir los siguientes pasos:
+
+1. Clona el repositorio en tu máquina local.
+2. Instala las dependencias del proyecto con `npm install` o `pnpm install`.
+3. Inicia el servidor de desarrollo con `npm run dev` o `pnpm run dev`.
+
+## Detalles del proyecto
+
+### Tecnologías utilizadas
+
+El proyecto está construido utilizando las siguientes tecnologías principales:
+
+- **Vue.js 3**: Framework progresivo de JavaScript para construir interfaces de usuario
+- **Vite**: Herramienta de compilación que ofrece un entorno de desarrollo más rápido
+- **Supabase**: Base de datos PosgreSQL para almacenar los comentarios y datos de geolocalización
+- **Express**: Framework de Node.js para crear la API REST
+- **Node.js**: Entorno de ejecución para JavaScript del lado del servidor
+
+### Características principales
+
+- Diseño responsive que se adapta a diferentes dispositivos
+- Sistema de comentarios con validaciones
+- Geolocalización de usuarios que comentan
+- Animaciones y transiciones fluidas
+- Componentes reutilizables
+- Validación de formularios con Zod
+- Integración con API REST propia
+
+### Estructura del proyecto
+
+
 ---
 
 <div align="center">
