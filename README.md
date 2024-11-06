@@ -60,7 +60,7 @@ Este repositorio incluye las lecciones de laboratorio de programación de la fac
 
 <a href="https://double-commit.vercel.app/">Portafolio en vivo</a>
 
-## Para ejecutar el proyecto en local, puedes seguir los siguientes pasos:
+## Para ejecutar el proyecto Vue.js en local, puedes seguir los siguientes pasos:
 
 1. Clona el repositorio en tu máquina local.
 2. Crea un archivo `.env` en la raíz del proyecto y agrega las variables de entorno necesarias.
@@ -73,8 +73,9 @@ Para las variables de entorno, puedes usar el archivo `.env.example` como refere
 ```
 VITE_SUPABASE_URL=tu_url_de_supabase
 VITE_SUPABASE_ANON_KEY=tu_anon_key_de_supabase
-VITE_WEATHER_API_KEY=tu_api_key_de_openweathermap // Solamente se usa para mejorar la presición de la geolocalización
+// Esta API del clima se usa para mejorar la presición de la geolocalización
 // del usuario en conjunto con la API de geolocation.microlink.io
+VITE_WEATHER_API_KEY=tu_api_key_de_openweathermap 
 ```
 
 ### Tecnologías utilizadas
