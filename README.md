@@ -63,10 +63,19 @@ Este repositorio incluye las lecciones de laboratorio de programación de la fac
 ## Para ejecutar el proyecto en local, puedes seguir los siguientes pasos:
 
 1. Clona el repositorio en tu máquina local.
-2. Instala las dependencias del proyecto con `npm install` o `pnpm install`.
-3. Inicia el servidor de desarrollo con `npm run dev` o `pnpm run dev`.
+2. Crea un archivo `.env` en la raíz del proyecto y agrega las variables de entorno necesarias.
+3. Instala las dependencias del proyecto con `npm install` o `pnpm install`.
+4. Inicia el servidor de desarrollo con `npm run dev` o `pnpm run dev`.
 
 ## Detalles del proyecto
+
+Para las variables de entorno, puedes usar el archivo `.env.example` como referencia.
+```
+VITE_SUPABASE_URL=tu_url_de_supabase
+VITE_SUPABASE_ANON_KEY=tu_anon_key_de_supabase
+VITE_WEATHER_API_KEY=tu_api_key_de_openweathermap // Solamente se usa para mejorar la presición de la geolocalización
+// del usuario en conjunto con la API de geolocation.microlink.io
+```
 
 ### Tecnologías utilizadas
 
@@ -75,8 +84,6 @@ El proyecto está construido utilizando las siguientes tecnologías principales:
 - **Vue.js 3**: Framework progresivo de JavaScript para construir interfaces de usuario
 - **Vite**: Herramienta de compilación que ofrece un entorno de desarrollo más rápido
 - **Supabase**: Base de datos PosgreSQL para almacenar los comentarios y datos de geolocalización
-- **Express**: Framework de Node.js para crear la API REST
-- **Node.js**: Entorno de ejecución para JavaScript del lado del servidor
 
 ### Características principales
 
@@ -86,10 +93,6 @@ El proyecto está construido utilizando las siguientes tecnologías principales:
 - Animaciones y transiciones fluidas
 - Componentes reutilizables
 - Validación de formularios con Zod
-- Integración con API REST propia
-
-### Estructura del proyecto
-
 
 ---
 
