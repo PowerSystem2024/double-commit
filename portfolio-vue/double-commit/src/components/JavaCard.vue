@@ -1,13 +1,38 @@
-<script lang="js" setup></script>
+<script lang="js" setup>
+const targetDay = new Date('November 10, 2024 00:00:00').getTime()
+const currentDay = Date.now()
+const difference = targetDay - currentDay
+
+setInterval(difference, 1000)
+</script>
 
 <template>
-  <article>
+  <article v-if="difference > 0">
     <div class="text-container">
       <h2>Proyecto Java en Construcción</h2>
       <p>
         Pronto podrán ver el proyecto integrador final en Java para la facultad de la mano del grupo
         Double Commit de la Organización Power System 2024 UTN-FRSR.
       </p>
+    </div>
+    <div class="img-container">
+      <div class="bg-left"></div>
+      <img src="/rocket.png" alt="rocket image" />
+    </div>
+  </article>
+  <article v-else>
+    <div class="text-container">
+      <h2>¡Proyecto Java Completado!</h2>
+      <p>
+        Hemos finalizado nuestro proyecto integrador en Java. Explora el código y la documentación
+        en nuestro repositorio de GitHub.
+      </p>
+      <a
+        href="https://github.com/DoubleCommit/Proyecto-Final-Java"
+        target="_blank"
+        class="btn-github"
+        >Ver Proyecto <i class="fas fa-external-link-alt"></i
+      ></a>
     </div>
     <div class="img-container">
       <div class="bg-left"></div>
@@ -82,6 +107,24 @@ p {
   height: 100%;
   z-index: 0;
   opacity: 0.7;
+}
+
+a {
+  position: absolute;
+  bottom: 33px;
+  right: 33px;
+  padding: 10px 20px;
+  width: fit-content;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: #232321;
+  text-decoration: none;
+  color: #ebf1e6;
+}
+
+a:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
 .bg-left {
