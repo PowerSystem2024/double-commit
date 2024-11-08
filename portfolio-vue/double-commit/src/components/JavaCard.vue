@@ -1,7 +1,5 @@
 <script lang="js" setup>
-const targetDay = new Date('November 10, 2024 00:00:00').getTime()
-const currentDay = Date.now()
-const difference = targetDay - currentDay
+import { difference } from './constants.vue'
 
 setInterval(difference, 1000)
 if (difference < 0) clearInterval(difference)

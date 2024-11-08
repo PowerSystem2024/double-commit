@@ -78,4 +78,8 @@ export const resize = () => {
   })
   return textarea
 }
+
+const targetDay = new Date('November 10, 2024 00:00:00').getTime()
+const currentDay = Date.now()
+export const difference = targetDay - currentDay
 </script>

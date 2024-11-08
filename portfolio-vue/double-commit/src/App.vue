@@ -9,6 +9,7 @@ import RemainTime from './components/RemainTime.vue'
 import CommentsForm from './components/CommentsForm.vue'
 import MarqueeComponent from './components/MarqueeComponent.vue'
 import JavaCard from './components/JavaCard.vue'
+import { difference } from './components/constants.vue'
 </script>
 
 <template>
@@ -23,7 +24,8 @@ import JavaCard from './components/JavaCard.vue'
   <span id="projects"></span>
   <SectionTitle children="Proyectos" />
   <ProjectsComponent />
-  <SectionTitle children="Tiempo Entrega Proyecto ☕ Java" />
+  <SectionTitle v-if="difference > 0" children="Tiempo Entrega Proyecto ☕ Java" />
+  <SectionTitle v-else children="¡Proyecto Java Completado!" />
   <RemainTime />
   <JavaCard />
   <span id="contact"></span>
