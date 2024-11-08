@@ -121,7 +121,7 @@ b {
 @media (width <= 700px) {
   h1,
   .double-commit {
-    font-size: 2.5rem;
+    font-size: 3.3rem;
   }
   .terminal-icon {
     display: none;
