@@ -74,7 +74,7 @@ h1 {
 .double-commit {
   font-size: 4rem;
   font-weight: 900;
-  paint-order: stroke markers;
+  paint-order: stroke fill;
   display: inline-block;
   letter-spacing: -0.1ch;
   -webkit-text-stroke: 18px #020c1e;
