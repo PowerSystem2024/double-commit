@@ -120,7 +120,7 @@ b {
 
 @media (width <= 700px) {
   h1,
-  span {
+  .double-commit {
     font-size: 2.5rem;
   }
   .terminal-icon {
