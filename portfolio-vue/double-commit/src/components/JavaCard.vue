@@ -4,6 +4,7 @@ const currentDay = Date.now()
 const difference = targetDay - currentDay
 
 setInterval(difference, 1000)
+if (difference < 0) clearInterval(difference)
 </script>
 
 <template>
