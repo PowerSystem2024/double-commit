@@ -2,7 +2,15 @@
 import { supabase } from '@/lib/supabaseClient'
 import { z } from 'zod'
 
-// Clase para enviar y recibir datos desde Supabase
+/**
+ * Clase para enviar y recibir datos de la base de datos
+ * @class Model
+ * @static {function} getComment - Obtiene los comentarios de la base de datos
+ * @static {function} sendComment - Envia un comentario a la base de datos
+ * @static {function} sendVisit - Envia una visita a la base de datos
+ * @static {function} getVisits - Obtiene las visitas de la base de datos
+ * @static {function} delete - Elimina un comentario de la base de datos
+ */
 export class Model {
   static async getComment() {
     const { data, error } = await supabase
@@ -15,7 +23,7 @@ export class Model {
     return data
   }
 
-  static async sendComment(schema, data, errors) {
+  static async sendComment(schema, data, errors, onCreate) {
     try {
       schema.parse(data)
 
@@ -26,6 +34,8 @@ export class Model {
       } else {
         errors = {}
       }
+
+      await onCreate()
     } catch (error) {
       if (error instanceof z.ZodError) {
         error.errors.forEach((err) => {
@@ -62,8 +72,7 @@ export class Model {
       return
     }
 
-    location.reload()
-    await this.getComment()
+    return { success: true }
   }
 }
 </script>

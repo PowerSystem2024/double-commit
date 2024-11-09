@@ -17,7 +17,7 @@ const closeMenu = () => {
 <template>
   <nav>
     <div class="logo-container">
-      <img alt="Logo Double Commit" class="logo" src="@/assets/logo-double-commit.svg" />
+      <img alt="Logo Double Commit" class="logo" src="/public/favicon.ico" />
       <span>Double Commit</span>
     </div>
     <button class="menu-btn" @click="toggleMenu">
@@ -87,6 +87,12 @@ img {
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--color-heading);
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-inline: 8px;
 }
 
 aside {

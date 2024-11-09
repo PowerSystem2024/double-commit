@@ -21,6 +21,7 @@ onMounted(async () => {
   const objData = {
     ip: await GetLocation.ip(),
     city: await GetLocation.city(),
+    province: await GetLocation.province(),
     country: await GetLocation.country()
   }
   const previousIPs = ip.value.map((v) => v.ip)
@@ -37,7 +38,7 @@ onMounted(async () => {
   <header>
     <h1>
       Bienvenidos al portafolio
-      <span><Terminal class="terminal-icon" /> Double-Commit</span>
+      <span class="double-commit"><Terminal class="terminal-icon" /> Double-Commit</span>
     </h1>
   </header>
   <aside>
@@ -70,10 +71,17 @@ h1 {
   line-height: 1.4;
 }
 
-span {
+.double-commit {
   font-size: 4rem;
-  font-weight: 800;
+  font-weight: 900;
+  paint-order: stroke fill;
+  display: inline-block;
   color: var(--second-color-text);
+  letter-spacing: -0.1ch;
+  -webkit-text-stroke: 18px #020c1e;
+  text-shadow:
+    0 0 10px black,
+    -5px 5px 0 #064073;
 }
 
 aside {
@@ -113,8 +121,8 @@ b {
 
 @media (width <= 700px) {
   h1,
-  span {
-    font-size: 2.5rem;
+  .double-commit {
+    font-size: 3.3rem;
   }
   .terminal-icon {
     display: none;

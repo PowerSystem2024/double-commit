@@ -24,6 +24,7 @@ const comments = ref([])
 const MAX_LENGTH = 160
 const LENGTH = 0
 const counterChars = ref(LENGTH)
+const commentSection = ref(null)
 
 /**
  * Validación con zod, documentación: https://zod.dev/?id=introduction
@@ -68,11 +69,19 @@ const sendForm = async (e) => {
   dataForm.value.city = await GetLocation.city()
   dataForm.value.province = await GetLocation.province()
   dataForm.value.country = await GetLocation.country()
+
   await Model.sendComment(formSchema, dataForm.value, errors.value)
+
   showDialog.value = true
   dialogMessage.value = `Muchas gracias por tu comentario ${dataForm.value.name}!`
   dataForm.value = { name: '', email: '', message: '' }
+
   await refreshComments()
+
+  commentSection.value = window.scrollTo({
+    top: document.documentElement.scrollHeight * 0.7,
+    behavior: 'smooth'
+  })
   isSubmiting.value = false
 }
 
@@ -149,12 +158,12 @@ onMounted(refreshComments)
   </div>
   <section v-else>
     <div v-if="comments.length > 1">
-      <h3>Comentarios recientes:</h3>
-      <CommentsComponent :data-comments="comments" />
+      <h3 :ref="commentSection">Comentarios recientes:</h3>
+      <CommentsComponent :data-comments="comments" v-on:delete="refreshComments" />
     </div>
     <div v-else>
-      <h3>Comentario reciente:</h3>
-      <CommentsComponent :data-comments="comments" />
+      <h3 :ref="commentSection">Comentario reciente:</h3>
+      <CommentsComponent :data-comments="comments" v-on:delete="refreshComments" />
     </div>
   </section>
 </template>
@@ -325,6 +334,7 @@ h3 {
   color: var(--color-heading);
   margin: 16px auto;
 }
+
 .place-content {
   width: 430px;
   height: 150px;

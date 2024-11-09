@@ -7,11 +7,18 @@ import { members } from './constants.vue'
     <div class="container-about">
       <p>
         Este grupo pertenece a la Organización Power System cohorte 2024 de la Universidad
-        Tecnológica Nacional de San Rafael Mendoza, el cuál está integrado por:
+        Tecnológica Nacional de San Rafael Mendoza dirigida por el profesor
+        <a
+          href="https://github.com/ArielBetancud22"
+          target="_blank"
+          title="Ir al perfil de Ariel Betancud"
+          class="teacher-link"
+          >Ariel Betancud</a
+        >, el cuál está integrado por:
       </p>
       <div class="members-list">
         <article v-for="(member, index) in members" :key="index">
-          <a :href="member.link" :title="`Ir al perfil de ${member.name}`">
+          <a class="member-link" :href="member.link" :title="`Ir al perfil de ${member.name}`">
             <img :src="member.avatar" :alt="member.name" width="45" height="45" />
             <span>{{ member.name }}</span>
           </a>
@@ -29,6 +36,18 @@ section {
   justify-content: center;
   text-align: center;
   padding: 10px;
+}
+
+.teacher-link {
+  text-decoration: none;
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.teacher-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: ease-in-out 0.2s;
 }
 
 p {
@@ -49,7 +68,7 @@ article {
   margin-top: 16px;
 }
 
-a {
+.member-link {
   display: flex;
   align-items: center;
   gap: 8px;
