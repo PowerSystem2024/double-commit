@@ -76,6 +76,7 @@ h1 {
   font-weight: 900;
   paint-order: stroke fill;
   display: inline-block;
+  color: var(--second-color-text);
   letter-spacing: -0.1ch;
   -webkit-text-stroke: 18px #020c1e;
   text-shadow:
